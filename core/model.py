@@ -6,7 +6,6 @@ class TaskStatus(StrEnum):
     TODO = auto()
     IN_PROGRESS = auto()
     CANCELLED = auto()
-    ARCHIVE = auto()
     DONE = auto()
 
 
@@ -20,6 +19,6 @@ class Task:
     def is_done(self) -> bool:
         return self.status in {
             TaskStatus.DONE,
-            TaskStatus.ARCHIVE,
             TaskStatus.CANCELLED,
         }
+
